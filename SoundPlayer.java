@@ -66,8 +66,7 @@ public class SoundPlayer {
             setVolume(bgmClip);
 
             bgmClip.loop(Clip.LOOP_CONTINUOUSLY);
-            bgmClip.start(); // 🔥 สำคัญ
-
+            bgmClip.start();
         }catch(Exception e){
             e.printStackTrace();
         }

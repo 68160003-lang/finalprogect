@@ -16,13 +16,13 @@ public class ResultGUI extends JFrame {
         Color cream = new Color(255,248,220);
         getContentPane().setBackground(cream);
 
-        // 🔥 จำผู้เล่นเรา
+        // จำผู้เล่นเรา
         Player you = players[0];
 
-        // 🏆 เรียงอันดับ
+        // เรียงอันดับ
         Arrays.sort(players, (a,b)-> b.score - a.score);
 
-        // 🔊 เสียงถูกต้อง
+        // เสียงถูกต้อง
         if(players[0] == you){
             SoundPlayer.play("win.wav");
         }else{
@@ -84,14 +84,14 @@ public class ResultGUI extends JFrame {
 
         again.addActionListener(e -> {
 
-            // 🔥 reset ค่า
+            // reset ค่า
             for(Player p : players){
                 p.score = 0;
                 p.winStreak = 0;
                 p.choice = "";
             }
 
-            // 🔥 หา player จริง
+            // หา player จริง
             Player user = null;
             for(Player p : players){
                 if(p.isUser){
@@ -100,7 +100,7 @@ public class ResultGUI extends JFrame {
                 }
             }
 
-            // 🔥 ย้าย user ไป index 0
+            // ย้าย user ไป index 0
             Player[] newPlayers = new Player[4];
             newPlayers[0] = user;
 

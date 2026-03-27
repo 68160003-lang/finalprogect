@@ -55,11 +55,11 @@ public class RoundedMenuButton extends JButton {
         int width = getWidth();
         int height = getHeight();
 
-        // 🔥 เงา
+        // เงา
         g2.setColor(new Color(0,0,0,50));
         g2.fillRoundRect(5,5,width-5,height-5,40,40);
 
-        // 🎨 เลือกสีตามสถานะ
+        // เลือกสีตามสถานะ
         if(pressed){
             g2.setColor(pressColor);
         }else if(hovered){
@@ -68,11 +68,11 @@ public class RoundedMenuButton extends JButton {
             g2.setColor(baseColor);
         }
 
-        // 🎮 ปุ่ม (มีเด้ง)
+        // ปุ่ม
         int offset = pressed ? 3 : 0;
         g2.fillRoundRect(0, offset, width-5, height-5, 40, 40);
 
-        // ✏️ ข้อความ
+        //  ข้อความ
         FontMetrics fm = g2.getFontMetrics();
         int x = (width - fm.stringWidth(getText())) / 2;
         int y = (height - fm.getHeight()) / 2 + fm.getAscent();

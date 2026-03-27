@@ -18,7 +18,7 @@ public class GameGUI extends JFrame {
 
     ImageIcon rock,paper,scissors;
 
-    // ✅ constructor แก้ error
+    // constructor แก้ error
     public GameGUI(Player[] players){
 
         this.players = players;
@@ -102,7 +102,7 @@ public class GameGUI extends JFrame {
 
         add(topPanel, BorderLayout.NORTH);
 
-        // 🔊 เสียงปุ่ม
+        // เสียงปุ่ม
         SoundPlayer.addClickSound(r);
         SoundPlayer.addClickSound(p);
         SoundPlayer.addClickSound(s);
@@ -146,21 +146,21 @@ public class GameGUI extends JFrame {
     // ===== GAME =====
     private void playRound(){
 
-        // ❗ ถ้ายังไม่เลือก ห้ามเล่น
+        //ถ้ายังไม่เลือก ห้ามเล่น
         if(playerChoice.equals("")){
             JOptionPane.showMessageDialog(this, "Please select first!");
             return;
         }
 
-        // 🎮 ผู้เล่น
+        // ผู้เล่น
         players[0].choice = playerChoice;
 
-        // 🤖 AI เลือก
+        // AI เลือก
         for(int i=1;i<players.length;i++){
             players[i].choice = randomChoice();
         }
 
-        // 🖼️ แสดงรูป
+        // แสดงรูป
         for(int i=0;i<players.length;i++){
             ImageIcon icon = getIcon(players[i].choice);
 
@@ -171,12 +171,12 @@ public class GameGUI extends JFrame {
             }
         }
 
-        // 🔥 reset streak
+        // reset streak
         for(Player p:players){
             p.lose();
         }
 
-        // 🧠 คำนวณผล
+        //  คำนวณผล
         for(int i=0;i<players.length;i++){
             for(int j=0;j<players.length;j++){
                 if(i != j && logic.win(players[i].choice, players[j].choice)){
@@ -186,7 +186,7 @@ public class GameGUI extends JFrame {
             }
         }
 
-        // 🎯 อัปเดต UI + glow
+        // อัปเดต UI + glow
         for(int i=0;i<players.length;i++){
 
             nameLabels[i].setText(
@@ -194,7 +194,7 @@ public class GameGUI extends JFrame {
                             " 🔥x" + players[i].winStreak
             );
 
-            // 🔥 glow ตอน streak 3+
+            //glow ตอน streak 3+
             if(players[i].winStreak >= 3){
                 images[i].setBorder(BorderFactory.createLineBorder(
                         new Color(255,140,0), 4, true));
@@ -203,11 +203,11 @@ public class GameGUI extends JFrame {
             }
         }
 
-        // 🔄 รีเซ็ต
+        //รีเซ็ต
         playerChoice = "";
         resetButtons();
 
-        // 🏆 เช็คจบเกม (ชนะที่ 3 คะแนน)
+        //เช็คจบเกม (ชนะที่ 3 คะแนน)
         for(Player p:players){
             if(p.score >= 3){
                 new ResultGUI(players);

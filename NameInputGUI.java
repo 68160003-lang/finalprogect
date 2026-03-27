@@ -9,7 +9,7 @@ public class NameInputGUI extends JFrame {
 
         setTitle("Enter Name");
 
-        // 🔥 เต็มจอ
+        // เต็มจอ
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         setUndecorated(true);
 
@@ -21,25 +21,25 @@ public class NameInputGUI extends JFrame {
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.insets = new Insets(15,15,15,15);
 
-        // 🧾 Title
+        // Title
         JLabel title = new JLabel("Enter Your Name");
         title.setFont(new Font("Arial", Font.BOLD, 30));
 
-        // 🧾 ช่องกรอก
+        //  ช่องกรอก
         nameField = new JTextField(15);
         nameField.setFont(new Font("Arial", Font.PLAIN, 20));
 
-        // 🟢 ปุ่มยืนยัน
+        //  ปุ่มยืนยัน
         GameButton confirm = new GameButton("Confirm", new Color(170,240,180));
 
-        // 🟠 ปุ่มลบชื่อ (ส้มอ่อน)
+        // ปุ่มลบชื่อ
         GameButton reset = new GameButton("Reset", new Color(255,200,150));
 
-        // 🔊 ใส่เสียงถูกต้อง (เฉพาะปุ่มที่มี)
+        //ใส่เสียงถูกต้อง
         SoundPlayer.addClickSound(confirm);
         SoundPlayer.addClickSound(reset);
 
-        // 📍 วางกลาง
+        // วางกลาง
         gbc.gridy = 0;
         add(title, gbc);
 
@@ -52,7 +52,7 @@ public class NameInputGUI extends JFrame {
         gbc.gridy = 3;
         add(reset, gbc);
 
-        // 🎯 Action
+        // Action
         confirm.addActionListener(e -> {
 
             String name = nameField.getText();

@@ -62,10 +62,10 @@ public class NameInputGUI extends JFrame {
             }
 
             Player[] players = new Player[4];
-            players[0] = new Player(name, true); // 👤 เรา
+            players[0] = new Player(name, true);
 
             for(int i=1;i<4;i++){
-                players[i] = new Player("AI-" + i, false); // 🤖 AI
+                players[i] = new Player("AI-" + i, false);
             }
 
             new GameGUI(players);

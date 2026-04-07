@@ -155,7 +155,7 @@ public class GameGUI extends JFrame {
         // ผู้เล่น
         players[0].choice = playerChoice;
 
-        // AI เลือก
+        // AIเลือก
         for(int i=1;i<players.length;i++){
             players[i].choice = randomChoice();
         }
@@ -191,7 +191,7 @@ public class GameGUI extends JFrame {
 
             nameLabels[i].setText(
                     players[i].name + " : " + players[i].score +
-                            " 🔥x" + players[i].winStreak
+                            " 🔥" + players[i].winStreak
             );
 
             //glow ตอน streak 3+
@@ -277,7 +277,7 @@ public class GameGUI extends JFrame {
     private ImageIcon loadIcon(String name){
         java.net.URL url = getClass().getResource("/"+name);
         if(url == null){
-            System.out.println("❌ ไม่เจอ: "+name);
+            System.out.println(" ไม่เจอ: "+name);
             return null;
         }
         Image img = new ImageIcon(url).getImage().getScaledInstance(120,120,Image.SCALE_SMOOTH);

@@ -13,7 +13,6 @@ public class CuteButton extends JButton {
         setFocusPainted(false);
         setContentAreaFilled(false);
         setForeground(Color.WHITE);
-        setFont(FontManager.promptBold(18f));
 
         setPreferredSize(new Dimension(160,50));
 

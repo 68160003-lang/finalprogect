@@ -30,7 +30,7 @@ public class ResultGUI extends JFrame {
         }
 
         // ===== TITLE =====
-        JLabel title = new JLabel("🏆 RESULT 🏆", JLabel.CENTER);
+        JLabel title = new JLabel(" RESULT ", JLabel.CENTER);
         title.setFont(new Font("Arial", Font.BOLD, 50));
         add(title, BorderLayout.NORTH);
 

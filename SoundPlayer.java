@@ -18,7 +18,7 @@ public class SoundPlayer {
             File f = new File("src/" + file);
 
             if(!f.exists()){
-                System.out.println("❌ ไม่เจอ: " + f.getAbsolutePath());
+                System.out.println("ไม่เจอ: " + f.getAbsolutePath());
                 return;
             }
 
@@ -54,7 +54,7 @@ public class SoundPlayer {
             File f = new File("src/" + file);
 
             if(!f.exists()){
-                System.out.println("❌ ไม่เจอ BGM");
+                System.out.println("ไม่เจอ BGM");
                 return;
             }
 
@@ -93,7 +93,7 @@ public class SoundPlayer {
             gain.setValue(dB);
 
         }catch(Exception e){
-            System.out.println("⚠️ ไม่รองรับ volume");
+            System.out.println("ไม่รองรับ volume");
         }
     }
 

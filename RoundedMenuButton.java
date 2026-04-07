@@ -23,7 +23,7 @@ public class RoundedMenuButton extends JButton {
         setPreferredSize(new Dimension(220,60));
         setCursor(new Cursor(Cursor.HAND_CURSOR));
 
-        // 🎮 hover + click animation
+        //hover + click animation
         addMouseListener(new MouseAdapter() {
             public void mouseEntered(MouseEvent e){
                 hovered = true;

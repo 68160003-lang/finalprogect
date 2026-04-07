@@ -17,11 +17,11 @@ public class Player {
     }
 
     public void win(){
-        winStreak++; // 🔥 ชนะ
+        winStreak++;
     }
 
     public void lose(){
-        winStreak = 0; // 🔥 แพ้รีเซ็ต
+        winStreak = 0;
     }
     public Player(String name, boolean isUser){
         this.name = name;

@@ -191,7 +191,7 @@ public class GameGUI extends JFrame {
 
             nameLabels[i].setText(
                     players[i].name + " : " + players[i].score +
-                            " 🔥" + players[i].winStreak
+                            " 🔥x" + players[i].winStreak
             );
 
             //glow ตอน streak 3+
@@ -207,9 +207,9 @@ public class GameGUI extends JFrame {
         playerChoice = "";
         resetButtons();
 
-        //เช็คจบเกม (ชนะที่ 3 คะแนน)
+        //เช็คจบเกม (ชนะที่ 7 คะแนน)
         for(Player p:players){
-            if(p.score >= 3){
+            if(p.score >= 7){
                 new ResultGUI(players);
                 dispose();
                 return;
